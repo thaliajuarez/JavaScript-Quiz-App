@@ -83,3 +83,9 @@ body.wrong {
 .hide {
   display: none;
 }
+
+#container-2 {
+  margin-top: 0.25rem;
+  text-align: center;
+  background-color: #336712;
+}
