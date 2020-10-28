@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="styles.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
   <script defer src="script.js"></script>
   <title>Quiz App</title>
 </head>
 <body>
-  <div class="contain">
-  <div class="container">
+  <div class="container"> <!-- Makes a card like container where we place our questions and buttons-->
     <div id="question-container" class="hide">
       <div id="question">Question</div>
       <div id="answer-buttons" class="btn-grid">
@@ -24,15 +22,9 @@
     <div class="controls">
       <button id="start-btn" class="start-btn btn">Start</button>
       <button id="next-btn" class="next-btn btn hide">Next</button>
+      <button id="restart-btn" class="restart-btn btn hide">Restart</button>
+
     </div>
   </div>
-  <div class=nothing>
-    <p>       </p>
-  </div>
-  <div class="container2">
-    <p>Score: </p>
-    <span id="right-answers"></span>
-  </div>
-</div>
 </body>
 </html>
