@@ -1,3 +1,5 @@
+// From HTML document - document object 
+//
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
@@ -5,6 +7,9 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
+
+// For score counter:
+let countRightAnswers = 0;
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -17,6 +22,9 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
+
+  // For score counter:
+  countRightAnswers = 0; // to reset the counter after the test started
   setNextQuestion()
 }
 
@@ -54,12 +62,19 @@ function selectAnswer(e) {
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
+
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
   }
+
+  // For score counter:
+  if (selectedButton.dataset = correct) {
+    countRightAnswers++; // +1, change it if you need +10, +25 etc
+  }
+  document.getElementById('right-answers').innerHTML = countRightAnswers; // span will show the score
 }
 
 function setStatusClass(element, correct) {
