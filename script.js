@@ -6,7 +6,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-// let - 
+// let - so they can re-defined later
 let shuffledQuestions, currentQuestionIndex
 // For score counter:
 let countRightAnswers = 0;
@@ -92,35 +92,35 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Are JavaScript arrays heterogenous or homogenous?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'heterogenous', correct: true },
+      { text: 'homogenous', correct: false }
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'Does JavaScript use static or dynamic scoping?',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: 'Static scoping', correct: true },
+      { text: 'Dynamic scoping', correct: false },
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'How do you create a function in JavaScript?',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'function:myFunction()', correct: false },
+      { text: 'function myFunction()', correct: true },
+      { text: 'function=myFunction()', correct: false },
+      { text: 'myFunction():function', correct: false }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'How do you comment in JavaScript?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: '//', correct: true },
+      { text: '/* */', correct: true },
+      { text: '##', correct: false },
+      { text: '**', correct: false },
     ]
   }
 ]
