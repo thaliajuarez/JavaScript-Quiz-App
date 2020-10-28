@@ -18,13 +18,12 @@ nextButton.addEventListener('click', () => {
 })
 
 function startGame() {
+  // For score counter:
+   countRightAnswers = 0; // to reset the counter after the test started
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
-
-  // For score counter:
-  countRightAnswers = 0; // to reset the counter after the test started
   setNextQuestion()
 }
 
